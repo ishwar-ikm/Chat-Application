@@ -13,7 +13,6 @@ dist-ssr
 *.local
 frontend
 .env
-backend/models/message.model.js
 
 # Editor directories and files
 .vscode/*

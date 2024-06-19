@@ -1,4 +1,4 @@
-import User from "../models/user.modal.js"
+import User from "../models/user.model.js"
 import bcrpt from "bcryptjs"
 import generateTokenAndSetCookie from "../utils/generateToken.js"
 
