@@ -43,7 +43,7 @@ const Messages = () => {
       }
 
       {!loading && messages.length === 0 &&
-        <p className='text-center'>Send a message to start conversation</p>
+        <p className='text-center text-white'>Send a message to start conversation</p>
       }
       {!loading && messages.map(message => {
           return <div key={message._id} ref={lastMessageRef}>
