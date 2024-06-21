@@ -14,6 +14,7 @@ Welcome to the Chat Application project! This application allows users to send m
     - [Prerequisites](#prerequisites)
     - [Backend Setup](#backend-setup)
     - [Frontend Setup](#frontend-setup)
+  - [Live Demo](#live-demo)
   - [Screenshots](#screenshots)
     - [Home](#home)
     - [Chat page](#chat-page)
@@ -116,6 +117,12 @@ To run the Chat Application locally, follow these steps:
    ```
 
    This will start the frontend server and open the application in your default web browser at `http://localhost:5173`.
+
+## Live Demo
+
+Check out the live demo of our Chat Application:
+
+[Chat Application Live](https://chat-application-klfk.onrender.com/)
 
 ## Screenshots
 ### Home
