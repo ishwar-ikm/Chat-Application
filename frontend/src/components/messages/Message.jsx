@@ -23,7 +23,7 @@ const Message = ({message}) => {
                     <img alt="Tailwind CSS chat bubble component" src={message.senderId == authUser._id ? `${authUser.profilePic}` : `${selectedConversation.profilePic}`} />
                 </div>
             </div>
-            <div className={`${message.shouldShake ? "shake" : ""} chat-bubble chat-bubble-${message.senderId == authUser._id ? "primary" : ""}`}>{message.message}</div>
+            <div className={`${message.shouldShake ? "shake" : ""} pb-2 chat-bubble chat-bubble-${message.senderId == authUser._id ? "primary" : ""}`}>{message.message}</div>
             <div className="chat-footer opacity-60">
                 {extractTime(message.createdAt)}
             </div>
