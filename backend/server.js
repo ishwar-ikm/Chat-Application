@@ -8,7 +8,7 @@ import connectToDB from "./db/connectToDB.js"
 import authRoutes from "./routes/auth.routes.js";
 import messageRoutes from "./routes/message.routes.js";
 import userRoutes from "./routes/user.routes.js"
-import { app, server } from "./Socket/socket.js";
+import { app, server } from "./socket/socket.js";
 
 const PORT = process.env.PORT || 5000;
 
