@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import useLogin from '../../hooks/useLogin';
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const { loading, login } = useLogin();
 
@@ -30,12 +33,16 @@ const Login = () => {
             />
           </div>
 
-          <div>
+          <div className='relative'>
             <label className='label p-2'><span className='text-base label-text'>Password</span></label>
-            <input type="password" placeholder='Enter password' className='w-full input input-bordered h-10'
+            <input type={showPassword ? "text" : "password"} placeholder='Enter password' className='w-full input input-bordered h-10'
               value={password}
               onChange={e => setPassword(e.target.value)}
             />
+            <div className='absolute end-2 top-2/3 cursor-pointer' onClick={e => setShowPassword(!showPassword)}>
+              {showPassword ? <FaEyeSlash /> : <FaEye/>}
+            </div>
+            
           </div>
 
           <a href="/signup" className='text-sm hover:underline hover:text-blue-600 mt-3 inline-block'>Don't have an account?</a>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import useSignUp from '../../hooks/useSignUp';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const CheckBox = ({ handleCheckbox, gender }) => {
     return (
@@ -35,6 +36,7 @@ const Signup = () => {
         confirmPassword: "",
         gender: ""
     });
+    const [showPassword, setShowPassword] = useState(false);
 
     const { loading, signup } = useSignUp();
 
@@ -72,12 +74,15 @@ const Signup = () => {
                         />
                     </div>
 
-                    <div>
+                    <div className='relative'>
                         <label className='label p-2'><span className='text-base label-text'>Password</span></label>
-                        <input type="password" placeholder='Enter password' className='w-full input input-bordered h-10'
+                        <input type={showPassword ? "text" : "password"} placeholder='Enter password' className='w-full input input-bordered h-10'
                             value={inputs.password}
                             onChange={e => setInputs({ ...inputs, password: e.target.value })}
                         />
+                        <div className='absolute end-2 top-2/3 cursor-pointer' onClick={e => setShowPassword(!showPassword)}>
+                          {showPassword ? <FaEyeSlash /> : <FaEye/>}
+                        </div>
                     </div>
                     <div>
                         <label className='label p-2'><span className='text-base label-text'>Confirm Password</span></label>
